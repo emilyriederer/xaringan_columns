@@ -8,7 +8,7 @@ The most important documents you will find here are:
 
 - `table_macro.js`: contains actual `col_header`, `col_list`, and `col_row` macro code
 - `table.css`: contains corresponding macro CSS - part **necessary** to make the macro work and part illustrating *optional* settings (e.g. coloring)
-- `demo.Rmd`: shows where and how to call these macros in a .Rmd file for a `xaringan` presentation
+- `demo.Rmd`: shows where and how to call these macros in a .Rmd file for a [`xaringan`](https://github.com/yihui/xaringan) presentation
 - `demo.html`: shows the output. It is also hosted on the corresponding [GitHub Pages](https://emilyriederer.github.io/xaringan_columns/demo.html)
 
 Other style sheets are simple are for personal design choices in my demo deck. 
@@ -32,7 +32,7 @@ where you would replace all "Header i" and "item i" with whatever text you want.
 
 ## Benefits
 
-My motivation for making this was that I'm trying to switch most of my personal/professional work to `xaringan` and away from editors like Powerpoint. I knew to use this at work, someone was going to inevitably want a "three boxer", and I couldn't find a great existing way to do that. 
+My motivation for making this was that I'm trying to switch most of my personal/professional work to [`xaringan`](https://github.com/yihui/xaringan) and away from editors like Powerpoint. I knew to use this at work, someone was going to inevitably want a "three boxer", and I couldn't find a great existing way to do that. 
 
 Relative to just laying things out in rows, columns can sometimes have advtanges in terms of emphasizing the parallel (versus sequential) nature of content.
 
@@ -48,3 +48,7 @@ There are currently a number of known short-comings to this approach. I list the
 - Extremely long one-word headers simply overflow and get cut-off. 
 - It can be hard to leave one column truly blank for a given row.
 - Text in any cell can't contain commas.
+
+## About Macros for `xaringan`
+
+This is a section I'm definitely not the right person to write. My inspiration/learning started from the [`xaringan` GitHub issue](https://github.com/yihui/xaringan/issues/80) on the topic.
