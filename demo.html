@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Macro for Many Columns</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emily Riederer" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="eee.css" type="text/css" />
+    <link rel="stylesheet" href="eee-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="table.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Macro for Many Columns
+### Emily Riederer
+
+---
+
+
+
+
+
+## Splitting slides into two columns is already pretty easy
+
+.pull-left[.full-width[ 
+
+You can just write:
+
+`.pull-left[.full-width[&lt;insert content&gt;]]` 
+
+for content to go on the left-hand side
+
+]]
+
+
+
+.pull-right[.full-width[ 
+
+...and similarly write:
+
+`.pull-right[.full-width[&lt;insert content&gt;]]` 
+
+for contents to go on the right-hand side
+
+]]
+
+
+---
+
+class: inverse, center, middle
+
+## But what if you want more than two columns?
+
+---
+
+class: inverse, center, middle
+
+## It's macro time!
+
+---
+
+## Basic idea is to create column structure row-by-row
+
+`![:col_header x, y, z]`: creates header with CSS class `multicolhead` for styling
+
+`![:col_list x, y, z]`: creates row of bulletted list items for each column
+
+`![:col_row x, y, z]`: creates row of text for each column
+
+---
+
+## For example, writing this...
+
+````html
+![:col_header Header 1, Header 2, Header 3]
+![:col_list You can add rows with bulletted lists, item2, item3]
+![:col_list item4, item5, Or normal chunks of text (see below)]
+![:col_row 
+    This is a long descriptive paragraph about a point 
+    that I need to explain in great details for it to 
+    be fully understood,
+    
+    This is another long explanatory piece. Sometimes you need 
+    to provide you readers a lot of information,
+    
+    Testing testing 1 2 3. Let's make this a little longer]
+````
+---
+
+## Three column layouts are easy
+
+![:col_header Header 1, Header 2, Header 3]
+![:col_list You can add rows with bulletted lists, item2, item3]
+![:col_list item4, item5, Or normal chunks of text (see below)]
+![:col_row 
+    This is a long descriptive paragraph about a point that I need to explain in great details
+    for it to be fully understood,
+    
+    This is another long explanatory piece. Sometimes you need to provide you readers a lot 
+    of information,
+    
+    Testing testing 1 2 3. Let's make this a little longer]
+
+---
+
+## Or four!
+
+![:col_header Header 1, Header 2, Header 3, Header 4]
+![:col_list You can add rows with bulletted lists, item2, item3, hello]
+![:col_list item4, item5, Or normal chunks of text (see below), la la la]
+![:col_row 
+    This is a long descriptive paragraph about a point that I need to explain in great details
+    for it to be fully understood,
+    
+    This is another long explanatory piece. Sometimes you need to provide you readers a lot 
+    of information,
+    
+    Testing testing 1 2 3,
+    
+    I'm in the fourth column]
+    
+---
+
+## Or five!
+
+### But it starts to get crowded...
+
+![:col_header Header 1, Header 2, Header 3, Header 4, Header 5]
+![:col_list You can add rows with bulletted lists, item2, item3, hello, more content]
+![:col_list item4, item5, Or normal chunks of text (see below), la la la, tra la la]
+![:col_row 
+    More text,
+    More text,
+    .,
+    More text,
+    More text
+]
+
+---
+
+## It's not perfect
+
+### Header text spills over
+
+![:col_header Super Long Headers Are Not My Friend, Header 2, Header 3]
+![:col_list You can add rows with bulletted lists, item2, item3]
+![:col_list item4, item5, Or normal chunks of text (see below)]
+
+---
+
+## It's not perfect
+
+### Long single-word headers can get cut-off
+
+![:col_header Super Long Headers Are Not My Friend, This_is_all_one_very_very_long_word, Header 3]
+![:col_list You can add rows with bulletted lists, item2, item3]
+![:col_list item4, item5, Or normal chunks of text (see below)]
+
+---
+
+
+## It's not perfect
+
+### It's hard to have a totally blank cell
+
+````html
+![:col_header Header 1, Header 2, Header 3]
+![:col_row content1, , content3]
+````
+
+doesn't honor the blank:
+
+![:col_header Header 1, Header 2, Header 3]
+![:col_row content1, , content3]
+
+---
+
+## It's not perfect
+
+### Commas separate columns so can't be used within
+
+````html
+![:col_header Header 1, Header 2, Header 3]
+![:col_row I wish this would be in column 1, and this would also be in column 1]
+````
+
+doesn't honor the blank:
+
+![:col_header Header 1, Header 2, Header 3]
+![:col_row I wish this would be in column 1, and this would also be in column 1]
+
+
+---
+
+## But for now it gets the job done
+
+I like it better than current alternatives
+
+![:col_header Just Using Rows, Raw HTML in Markdown, Macro]
+![:col_row &lt;b&gt;Pro&lt;/b&gt;, &lt;b&gt;Pro&lt;/b&gt;, &lt;b&gt;Pro&lt;/b&gt;]
+![:col_list 
+  Easy to implement without custom scripting,
+  Flexibility for custom styling, 
+  Cleaner syntax is docs 
+]
+![:col_row &lt;b&gt;Con&lt;/b&gt;, &lt;b&gt;Con&lt;/b&gt;, &lt;b&gt;Con&lt;/b&gt;]
+![:col_list 
+  Makes info seem sequential vs parallel,
+  Bulky to leave in code, 
+  Limitations described before 
+]
+![:col_list 
+  One option could get boring,
+  More typo-prone and less repeatable, 
+    
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="table_macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+/*
+Non-code fonts chosen per UNC Chapel Hill typography style guide (https://identity.unc.edu/typography/)
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
+body, h1, h2, h3 { 
+	font-family: 'Open Sans', sans-serif; 
+	}
+
+.remark-code, .remark-inline-code { 
+	font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace; 
+	color: #13294B
+	}

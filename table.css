@@ -1,0 +1,6 @@
+/* Clear floats after the columns */
+.multicolrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}

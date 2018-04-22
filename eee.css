@@ -1,0 +1,24 @@
+/*
+Colors chosen per UNC Chapel Hill typography style guide (https://identity.unc.edu/colors/)
+*/
+
+h1, h2, h3 {
+  font-weight: normal;
+  color: #4B9CD3;
+}
+a, a > code {
+  color: #007FAE;
+}
+.remark-code-line-highlighted { background-color: rgba(225, 225, 225, 0.3); }
+
+.inverse {
+  background-color: #4B9CD3;
+}
+
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, .inverse a > code {
+  color: #FFFFFF;
+}
+
+.inverse .remark-slide-number {
+  display: none;
+}
