@@ -30,6 +30,18 @@ To create a three-column table with a header row and lists, you might do somethi
 ```
 where you would replace all "Header i" and "item i" with whatever text you want.
 
+## A Note on Design
+
+This approach lets you build your columns row-by-row, similar to how you might think about laying things out in your head. As a result, it's implemented with a bunch `div`s. I considered alternatively having a single syntax with something like:
+
+```
+![:col_table dim1, dim2, 
+      h1, h2, h3, 
+      item 1.1, item 1.2, item 1.3]
+``` 
+
+which could be implemented with `<table>` instead. However, the end-user syntax here seemed bulkier to me, and it seemed less in line with how I tend to be thinking and writing when I'm making this sort of layout, so I took with the former approach.
+
 ## Benefits
 
 My motivation for making this was that I'm trying to switch most of my personal/professional work to [`xaringan`](https://github.com/yihui/xaringan) and away from editors like Powerpoint. I knew to use this at work, someone was going to inevitably want a "three boxer", and I couldn't find a great existing way to do that. 
