@@ -9,13 +9,15 @@ remark.macros.col_header = function (...titles) {
   var code =
 '<center>'+
 '<div class="multicolrow"' +
-    'style="font-weight:bold; text-align:center; color:#ffffff;">';
+    'style="font-weight:bold; text-align:center; vertical-align: middle; height:100%">';
 
   for(let i = 0; i < num_items; i++)
   code = 
     code +  
     '<div class="multicolhead"'+
-    'style="float:left; background-color:#4B9CD3; padding: 1% 0.25% 1% 0.25%;'+
+    'style="'+
+    'float:left;'+
+    'padding: 1% 0.25% 1% 0.25%;'+
     'font-size: 80%;' +
     'margin: 1% 0.25% 1% 0.25%;' + 
     'width: ' + width + '%;">' + 

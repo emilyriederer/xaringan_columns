@@ -7,7 +7,7 @@ This project contains a small JavaScript macro which can be used in Markdown for
 The most important documents you will find here are:
 
 - `table_macro.js`: contains actual `col_header`, `col_list`, and `col_row` macro code
-- `table.css`: contains corresponding CSS **necessary** to make the macro work (since CSS psuedo elements can't be set in inline HTML)
+- `table.css`: contains corresponding macro CSS - part **necessary** to make the macro work and part illustrating *optional* settings (e.g. coloring)
 - `demo.Rmd`: shows where and how to call these macros in a .Rmd file for a `xaringan` presentation
 - `demo.html`: shows the output. It is also hosted on the corresponding [GitHub Pages](https://emilyriederer.github.io/xaringan_columns/demo.html)
 

@@ -1,6 +1,12 @@
-/* Clear floats after the columns */
+/* Required: Clear floats after the columns */
 .multicolrow:after {
     content: "";
     display: table;
     clear: both;
+}
+
+/*Optional: Color header boxes*/
+.multicolhead {
+    background-color:#4B9CD3;
+    color: #FFFFFF;
 }
