@@ -1,3 +1,6 @@
+// creates equal-width column headers with css class multicolhead for styling
+// ...titles is a comma-separated list a values to determine number and contents of columns
+
 remark.macros.col_header = function (...titles) {
   
   var num_items = titles.length;
@@ -28,6 +31,9 @@ return code;
 
 };
 
+// creates row of equal-width column list elements
+// ...bodies is a comma-separated list a values to determine number and contents of columns
+
 remark.macros.col_list = function (...bodies) {
   
   var code =
@@ -48,6 +54,9 @@ code = code +
 return code;
 
 };
+
+// creates row of equal-width column contents
+// ...bodies is a comma-separated list a values to determine number and contents of columns
 
 remark.macros.col_row = function (...bodies) {
   
