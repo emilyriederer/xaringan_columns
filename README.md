@@ -13,6 +13,28 @@ The most important documents you will find here are:
 
 Other style sheets are simple are for personal design choices in my demo deck. 
 
+## How-To Use
+
+To use this macro, you would need to save `table_macro.js` and `table.css` in your project's directory. Then, reference these files in your YAML header. An example of this step is the YAML header of `demo.Rmd`:
+
+```markdown
+---
+title: "Macro for Many Columns"
+author: "Emily Riederer"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default", "eee.css", "eee-fonts.css", "table.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+    nature:
+      beforeInit: "table_macro.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
+
+Observe that `table.css` is in the `css:` key-value pair, and `table_macro.js` is in the `beforeInit` key-value pair.
+
 ## Functionality
 
 `table_macro.js` defines three macros that can be called in Markdown as follows:
