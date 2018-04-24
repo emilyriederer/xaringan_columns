@@ -135,23 +135,45 @@ class: inverse, center, middle
 
 ---
 
-## It's not perfect
+## It's somewhat flexible
 
-### Header text spills over
+### `col_header` adjusts to tallest needed box
 
-![:col_header Super Long Headers Are Not My Friend, Header 2, Header 3]
+![:col_header Super Long Headers Are Increase Height of All Headers, Header 2, Header 3]
 ![:col_list You can add rows with bulletted lists, item2, item3]
 ![:col_list item4, item5, Or normal chunks of text (see below)]
 
 ---
 
-## It's not perfect
+## It's somewhat flexible
 
-### Long single-word headers can get cut-off
+### Super long words will wrap
 
-![:col_header Super Long Headers Are Not My Friend, Thisisalloneveryveryverylongword, Header 3]
+![:col_header Header 1, Thisisalloneveryveryverylongword, Header 3]
 ![:col_list You can add rows with bulletted lists, item2, item3]
 ![:col_list item4, item5, Or normal chunks of text (see below)]
+
+But still not the best look...
+
+---
+
+## You can pass in arbitrary HTML
+
+````html
+![:col_header 
+  <i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"></i>,
+  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>
+              ]
+![:col_row content1, content2]
+````
+
+turns into this:
+
+![:col_header 
+  <i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"></i>,
+  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>
+              ]
+![:col_row content1, content2]
 
 ---
 
