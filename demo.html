@@ -141,6 +141,42 @@ class: inverse, center, middle
 
 ---
 
+## You can also pass in arbitrary HTML
+
+````html
+![:col_header 
+  &lt;i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;,
+  &lt;i class="fa fa-music" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;
+              ]
+![:col_row content1, content2]
+````
+
+turns into this:
+
+![:col_header 
+  &lt;i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;,
+  &lt;i class="fa fa-music" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;
+              ]
+![:col_row content1, content2]
+
+---
+
+## And you don't have to have headers if you don't want to
+
+![:col_row 
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,
+
+Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat,
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur,
+
+Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum
+
+]
+
+---
+
 ## It's somewhat flexible
 
 ### `col_header` adjusts to tallest needed box
@@ -162,27 +198,6 @@ class: inverse, center, middle
 But still not the best look...
 
 ---
-
-## You can pass in arbitrary HTML
-
-````html
-![:col_header 
-  &lt;i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;,
-  &lt;i class="fa fa-music" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;
-              ]
-![:col_row content1, content2]
-````
-
-turns into this:
-
-![:col_header 
-  &lt;i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;,
-  &lt;i class="fa fa-music" aria-hidden="true" style="font-size:55px;"&gt;&lt;/i&gt;
-              ]
-![:col_row content1, content2]
-
----
-
 
 ## It's not perfect
 
@@ -214,6 +229,7 @@ doesn't honor the blank:
 ![:col_header Header 1, Header 2, Header 3]
 ![:col_row I wish this would be in column 1, and this would also be in column 1]
 
+...and using periods just flat out makes it error out
 
 ---
 
