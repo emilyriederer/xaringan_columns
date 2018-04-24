@@ -79,7 +79,7 @@ This is currently in total hack status as something I made quickly just to achie
 There are currently a number of known short-comings to this approach. I list them below, but they are better understoof via illustration in the [demo deck](https://emilyriederer.github.io/xaringan_columns/demo.html). Known issues are:
 
 - It can be hard to leave one column truly blank for a given row
-- Text in any cell can't contain commas
+- Text in any cell can't contain commas or periods
 
 ## About Macros for `xaringan`
 
