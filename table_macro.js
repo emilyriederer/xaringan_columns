@@ -14,7 +14,7 @@ remark.macros.col_header = function (...titles) {
   for(let i = 0; i < num_items; i++)
   code = 
     code +  
-    '<div class="multicolhead"'+
+    '<div class="multicolhead wordwrap"'+
     'style="'+
     'float:left;'+
     //'align-items: stretch;'+
