@@ -135,23 +135,31 @@ class: inverse, center, middle
 
 ---
 
-## You can also pass in arbitrary HTML
+## You can also use with HTML vs text
 
 ````html
 ![:col_header 
   <i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"></i>,
-  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>
+  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>,
+  <i class="fa fa-area-chart" aria-hidden="true" style="font-size:55px;"></i>
               ]
-![:col_row content1, content2]
+![:col_row 
+  My first paragraph of content1, 
+  This is more content2, 
+  Hello my name is content3]
 ````
 
 turns into this:
 
 ![:col_header 
   <i class="fa fa-camera" aria-hidden="true" style="font-size:55px;"></i>,
-  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>
+  <i class="fa fa-music" aria-hidden="true" style="font-size:55px;"></i>,
+  <i class="fa fa-area-chart" aria-hidden="true" style="font-size:55px;"></i>
               ]
-![:col_row content1, content2]
+![:col_row 
+  My first paragraph of content1, 
+  This is more content2, 
+  Hello my name is content3]
 
 ---
 
