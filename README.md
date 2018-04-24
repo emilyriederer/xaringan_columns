@@ -78,10 +78,8 @@ This is currently in total hack status as something I made quickly just to achie
 
 There are currently a number of known short-comings to this approach. I list them below, but they are better understoof via illustration in the [demo deck](https://emilyriederer.github.io/xaringan_columns/demo.html). Known issues are:
 
-- Long headers only expand the box size for that cell. Everything still stays in-line but the boxes of the other headers to do not grow correspondingly larger.
-- Extremely long one-word headers simply overflow and get cut-off. 
-- It can be hard to leave one column truly blank for a given row.
-- Text in any cell can't contain commas.
+- It can be hard to leave one column truly blank for a given row
+- Text in any cell can't contain commas
 
 ## About Macros for `xaringan`
 
