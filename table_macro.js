@@ -4,7 +4,7 @@
 remark.macros.col_header = function (...titles) {
   
   var num_items = titles.length;
-  var width = Math.floor(100/titles.length) - 2*0.5;
+  var width = Math.floor(100/num_items) - 2*0.5;
   
   var code =
 '<center>'+
@@ -39,14 +39,21 @@ return code;
 
 remark.macros.col_list = function (...bodies) {
   
+  var num_items = bodies.length;
+  var width = Math.floor(100/num_items) - 0.5;
+  
   var code =
 '<center>'+
 '<div class="multicolrow" style="text-align:left;">' ;
 
-  for(let i = 0; i<bodies.length; i++)
+  for(let i = 0; i<num_items; i++)
   code =
     code +
-  '<div class="multicolcol" style="float:left; width:' + Math.floor(100/bodies.length) + '%;"> <li>' + 
+  '<div class="multicolcol" style="'+
+  'float:left;'+
+  'font-size: 80%;' +
+  'margin: 0% 0.25% 0% 0.25%;' + 
+  'width:' + width + '%;"> <li>' + 
   bodies[i] + 
   '</li> </div>';
 
@@ -63,6 +70,9 @@ return code;
 
 remark.macros.col_row = function (...bodies) {
   
+  var num_items = bodies.length;
+  var width = Math.floor(100/num_items) - 0.5;
+  
   var code =
 '<center>'+
 '<div class="multicolrow" style="text-align:left;">' ;
@@ -70,7 +80,11 @@ remark.macros.col_row = function (...bodies) {
   for(let i = 0; i<bodies.length; i++)
   code =
     code +
-  '<div class="multicolcol" style="float:left; width:' + Math.floor(100/bodies.length) + '%;">' + 
+  '<div class="multicolcol" style="'+
+  'float:left;'+
+  'font-size: 80%;' +
+  'margin: 0% 0.25% 0% 0.25%;' + 
+  'width:' + width + '%;">' + 
   bodies[i] + 
   '</div>';
 
