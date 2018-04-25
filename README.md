@@ -6,8 +6,8 @@ This project contains a small JavaScript macro which can be used in Markdown for
 
 The most important documents you will find here are:
 
-- `table_macro.js`: contains actual `col_header`, `col_list`, and `col_row` macro code
-- `table.css`: contains corresponding macro CSS - part **necessary** to make the macro work and part illustrating *optional* settings (e.g. coloring)
+- `cols_macro.js`: contains actual `col_header`, `col_list`, and `col_row` macro code
+- `cols.css`: contains corresponding macro CSS - part **necessary** to make the macro work and part illustrating *optional* settings (e.g. coloring)
 - `demo.Rmd`: shows where and how to call these macros in a .Rmd file for a [`xaringan`](https://github.com/yihui/xaringan) presentation
 - `demo.html`: shows the output. It is also hosted on the corresponding [GitHub Pages](https://emilyriederer.github.io/xaringan_columns/demo.html)
 
@@ -15,7 +15,7 @@ Other style sheets are simple are for personal design choices in my demo deck.
 
 ## How-To Use
 
-To use this macro, you would need to save `table_macro.js` and `table.css` in your project's directory. Then, reference these files in your YAML header. An example of this step is the YAML header of `demo.Rmd`:
+To use this macro, you would need to save `cols_macro.js` and `cols.css` in your project's directory. Then, reference these files in your YAML header. An example of this step is the YAML header of `demo.Rmd`:
 
 ```markdown
 ---
@@ -24,26 +24,26 @@ author: "Emily Riederer"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default", "eee.css", "eee-fonts.css", "table.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+    css: ["default", "eee.css", "eee-fonts.css", "cols.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
     nature:
-      beforeInit: "table_macro.js"
+      beforeInit: "cols_macro.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 ```
 
-Observe that `table.css` is in the `css:` key-value pair, and `table_macro.js` is in the `beforeInit` key-value pair.
+Observe that `cols.css` is in the `css:` key-value pair, and `cols_macro.js` is in the `beforeInit` key-value pair.
 
 ## Functionality
 
-`table_macro.js` defines three macros that can be called in Markdown as follows:
+`cols_macro.js` defines three macros that can be called in Markdown as follows:
 
 - `![:col_header x, y, z]`: creates header with CSS class `multicolhead` for styling
 - `![:col_list x, y, z]`: creates row of bulletted list items for each column
 - `![:col_row x, y, z]`: creates row of text for each column
 
-To create a three-column table with a header row and lists, you might do something like this:
+To create a three-column layout with a header row and lists, you might do something like this:
 
 ```markdown
 ![:col_header Header 1, Header 2, Header 3]

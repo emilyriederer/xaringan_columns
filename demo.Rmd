@@ -4,9 +4,9 @@ author: "Emily Riederer"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default", "eee.css", "eee-fonts.css", "table.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+    css: ["default", "eee.css", "eee-fonts.css", "cols.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
     nature:
-      beforeInit: "table_macro.js"
+      beforeInit: "cols_macro.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
