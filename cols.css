@@ -17,3 +17,7 @@
    white-space: -o-pre-wrap;   /* Opera 7 */    
    word-wrap: break-word;      /* IE */
 }
+
+.multicolcol {
+  min-height: 1px;
+}
