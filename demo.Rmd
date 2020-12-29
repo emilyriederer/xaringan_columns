@@ -201,16 +201,14 @@ But still not the best look...
 
 ---
 
-## ~~It's not perfect~~
+## It's not perfect
 
-### ~~It's hard to have a totally blank cell~~
+### Here's how to make a totally blank cell
 
 ````html
 ![:col_header Header 1, Header 2, Header 3]
 ![:col_row content1, , content3]
 ````
-
-~~doesn't honor the blank:~~
 
 ![:col_header Header 1, Header 2, Header 3]
 ![:col_row content1, , content3]
@@ -219,7 +217,9 @@ But still not the best look...
 
 ## It's not perfect
 
-### Commas separate columns so can't be used within a column. Instead, one can use the unicode character `&#44;`.
+### Commas separate columns so can't be used within a column. 
+
+Instead, one can use the unicode character `&#44;`.
 
 ````html
 ![:col_header Header 1, Header 2, Header 3]
