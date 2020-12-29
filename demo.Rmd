@@ -201,16 +201,16 @@ But still not the best look...
 
 ---
 
-## It's not perfect
+## ~~It's not perfect~~
 
-### It's hard to have a totally blank cell
+### ~~It's hard to have a totally blank cell~~
 
 ````html
 ![:col_header Header 1, Header 2, Header 3]
 ![:col_row content1, , content3]
 ````
 
-doesn't honor the blank:
+~~doesn't honor the blank:~~
 
 ![:col_header Header 1, Header 2, Header 3]
 ![:col_row content1, , content3]
@@ -219,17 +219,17 @@ doesn't honor the blank:
 
 ## It's not perfect
 
-### Commas separate columns so can't be used within
+### Commas separate columns so can't be used within a column. Instead, one can use the unicode character `&#44;`.
 
 ````html
 ![:col_header Header 1, Header 2, Header 3]
-![:col_row I wish this would be in column 1, and this would also be in column 1]
+![:col_row I wish this would be in column 1&#44; and this would also be in column 1, ,]
 ````
 
 doesn't honor the blank:
 
-![:col_header Header 1, Header 2, Header 3]
-![:col_row I wish this would be in column 1, and this would also be in column 1]
+![:col_header Header 1 , Header 2 , Header 3]
+![:col_row I wish this would be in column 1&#44; and this would also be in column 1, ,]
 
 ...and using periods just flat out makes it error out
 
